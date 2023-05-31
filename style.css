@@ -84,6 +84,9 @@ align-self: self-start;
     white-space: normal;
     font-size: 1.05rem;
 }
+.chat .chat-details p.error{
+    color:red;
+}
 span .ionic-icons{
     user-select: none;
     cursor: pointer;
@@ -94,7 +97,7 @@ span .ionic-icons{
     color:var(--icon-color);
     visibility: hidden;
 }
-.chat:hover .chat-content:not(:has(.typing-animation)) span {
+.chat:hover .chat-content:not(:has(.typing-animation .error )) span {
     visibility: visible;
 }
 .typing-animation
@@ -158,6 +161,8 @@ span .ionic-icons{
     height: 55px;
     border: none;
     resize: none;
+    max-height: 250px;
+    overflow-y: auto;
     color:var(--text-color);
     background: var(--incoming-chat-bg);
     outline: 1px solid var(--incoming-chat-border);
@@ -175,7 +180,26 @@ span .ionic-icons{
 .typing-textarea textarea:valid ~ span{
     visibility: visible;
 }
-
+.default-text
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    padding: 0 10px;
+    text-align: center;
+    color: var(--text-color);
+}
+.default-text h1
+{
+    font-size: 3.3rem;
+}
+.default-text p
+{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
 
 .typing-content span 
 {
