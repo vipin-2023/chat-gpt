@@ -6,7 +6,7 @@ const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
 
-const API_KEY = "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";
+const API_KEY = "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";
 const initialHeight = chatInput.scrollHeight;
 const loadDataFromLoacalstorage =()=>{
   const themeColor = localStorage.getItem("theme-color");
@@ -67,7 +67,7 @@ try {
   pElement.textContent = "Ooops ! Something went wrong while retrieving the response.Please try angain.";
 
 }
-incomingChatDiv.querySelector(".typing-animation").revome();
+incomingChatDiv.querySelector(".typing-animation").remove();
 incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
 chatContainer.scrollTo(0,chatContainer.scrollHeight);
 localStorage.setItem("all-chats",chatContainer.innerHTML);
